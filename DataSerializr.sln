@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9D7C7E45-8131-4543-A540-CD2F80B6CBDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSerializr.Json.Test", "test\DataSerializr.Json.Test\DataSerializr.Json.Test.csproj", "{36BCE1D0-980A-4FF0-BD01-E2E3249018DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8E1B5398-F41E-4224-A0BD-B781F50594A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSerializr.Json", "src\DataSerializr.Json\DataSerializr.Json.csproj", "{79324BE4-F547-4AD3-8592-1DB4D413ECE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36BCE1D0-980A-4FF0-BD01-E2E3249018DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36BCE1D0-980A-4FF0-BD01-E2E3249018DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36BCE1D0-980A-4FF0-BD01-E2E3249018DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36BCE1D0-980A-4FF0-BD01-E2E3249018DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79324BE4-F547-4AD3-8592-1DB4D413ECE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79324BE4-F547-4AD3-8592-1DB4D413ECE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79324BE4-F547-4AD3-8592-1DB4D413ECE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79324BE4-F547-4AD3-8592-1DB4D413ECE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36BCE1D0-980A-4FF0-BD01-E2E3249018DB} = {9D7C7E45-8131-4543-A540-CD2F80B6CBDB}
+		{79324BE4-F547-4AD3-8592-1DB4D413ECE2} = {8E1B5398-F41E-4224-A0BD-B781F50594A8}
+	EndGlobalSection
+EndGlobal
