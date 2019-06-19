@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <PackageId>DataSerializr.Json</PackageId>
-    <PackageVersion>0.1</PackageVersion>
+    <PackageVersion>0.1.1</PackageVersion>
     <Authors>Conrad Yacat</Authors>
     <Title>DataSerializr.Json</Title>
     <PackOnBuild>true</PackOnBuild>
@@ -11,6 +11,7 @@
     <Description>A JsonConverter for Json.Net to serialize and deserialize DataTable and DataView into a smaller Json.</Description>
     <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
     <Summary>A JsonConverter for Json.Net to serialize and deserialize DataTable and DataView into a smaller Json.</Summary>
+    <ReleaseVersion>0.1.1</ReleaseVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
