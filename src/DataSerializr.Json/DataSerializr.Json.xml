@@ -21,7 +21,7 @@
             Determines whether this instance can convert the specified value type.
             </summary>
             <param name="objectType">The type of the object.</param>
-            <returns></returns>
+            <returns>Returns a boolean value whether the object instance can be converted.</returns>
         </member>
         <member name="M:DataSerializr.Json.DataTableJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
             <summary>
@@ -58,7 +58,7 @@
             Determines whether this instance can convert the specified value type.
             </summary>
             <param name="objectType">The type of the object.</param>
-            <returns></returns>
+            <returns>Returns a boolean value whether the object instance can be converted.</returns>
         </member>
         <member name="M:DataSerializr.Json.DataViewJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
             <summary>
@@ -91,7 +91,7 @@
             <param name="timeOffset">The time offset</param>
             <returns>Returns a numeric date value.</returns>
         </member>
-        <member name="M:DataSerializr.Json.DateTimeUtil.FromNumericDatetime(System.Int64,System.Int32)">
+        <member name="M:DataSerializr.Json.DateTimeUtil.FromNumericDateTime(System.Int64,System.Int32)">
             <summary>
             Converts a numeric date value to an equivalent <see cref="T:System.DateTime"/> instance.
             </summary>
@@ -124,6 +124,42 @@
             </summary>
             <param name="type"></param>
             <returns></returns>
+        </member>
+        <member name="T:DataSerializr.Json.NumericDateTimeConverter">
+            <summary>
+            Converts <see cref="T:System.DateTime"/> to and from numeric date value.
+            </summary>
+        </member>
+        <member name="M:DataSerializr.Json.NumericDateTimeConverter.#ctor(System.Int32)">
+            <summary>
+            Initializes an instance of NumericDateTimeConverter.
+            </summary>
+            <param name="timeOffset">The time offset to use to calculate the time.</param>
+        </member>
+        <member name="M:DataSerializr.Json.NumericDateTimeConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether this instance can convert the specified value type.
+            </summary>
+            <param name="objectType">The type of the object.</param>
+            <returns>Returns a boolean value whether the object instance can be converted.</returns>
+        </member>
+        <member name="M:DataSerializr.Json.NumericDateTimeConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns>The object value.</returns>
+        </member>
+        <member name="M:DataSerializr.Json.NumericDateTimeConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter"/> to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
         </member>
     </members>
 </doc>
