@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
@@ -8,10 +8,17 @@
     <Title>DataSerializr.Json</Title>
     <PackOnBuild>true</PackOnBuild>
     <Owners>Conrad Yacat</Owners>
-    <Description>A JsonConverter for Json.Net to serialize and deserialize DataTable and DataView into a smaller Json.</Description>
-    <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+    <Description>A JsonConverter for Newtonsoft's Json.Net to serialize and deserialize DataTable and DataView into a smaller Json.</Description>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <Summary>A JsonConverter for Json.Net to serialize and deserialize DataTable and DataView into a smaller Json.</Summary>
-    <ReleaseVersion>0.1.1</ReleaseVersion>
+    <ReleaseVersion>0.1.2</ReleaseVersion>
+    <PackageProjectUrl>https://github.com/conradyacat/DataSerializr.Json</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/conradyacat/DataSerializr.Json</RepositoryUrl>
+    <PackageTags>serializer serialization json json.net datatable</PackageTags>
+    <Version>0.1.2</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright (c) 2014 Conrad Yacat</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -21,8 +28,17 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DocumentationFile>C:\temp\Scratch\Git\DataSerializr.Json\src\DataSerializr.Json\DataSerializr.Json.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

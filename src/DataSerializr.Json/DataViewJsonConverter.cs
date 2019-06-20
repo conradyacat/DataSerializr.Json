@@ -64,7 +64,7 @@ namespace DataSerializr.Json
         /// <summary>
         /// Determines whether this instance can convert the specified value type.
         /// </summary>
-        /// <param name="objectType"></param>
+        /// <param name="objectType">The type of the object.</param>
         /// <returns></returns>
         public override bool CanConvert(Type objectType)
         {

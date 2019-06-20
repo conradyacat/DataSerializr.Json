@@ -29,11 +29,23 @@ namespace DataSerializr.Json
     {
         private static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1);
 
+        /// <summary>
+        /// Converts a <see cref="DateTime"/> instance to an equivalent numeric date value.
+        /// </summary>
+        /// <param name="date">The <see cref="DateTime"/> instance.</param>
+        /// <param name="timeOffset">The time offset</param>
+        /// <returns>Returns a numeric date value.</returns>
         public static long ToNumericDateTime(DateTime date, int timeOffset = 0)
         {
             return (long)(date.AddMinutes(timeOffset) - UnixEpoch).TotalMilliseconds;
         }
 
+        /// <summary>
+        /// Converts a numeric date value to an equivalent <see cref="DateTime"/> instance.
+        /// </summary>
+        /// <param name="numericDate">The numeric date value</param>
+        /// <param name="timeOffset">The time offset</param>
+        /// <returns>Return the <see cref="DateTime"/> instance.</returns>
         public static DateTime FromNumericDatetime(long numericDate, int timeOffset = 0)
         {
             if (numericDate == -1)

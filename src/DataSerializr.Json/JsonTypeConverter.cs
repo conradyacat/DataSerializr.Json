@@ -32,6 +32,11 @@ namespace DataSerializr.Json
         private const string DATETIME = "datetime";
         private const string BOOLEAN = "boolean";
 
+        /// <summary>
+        /// Determines the equivalent Json type from the Clr type.
+        /// </summary>
+        /// <param name="type">The Clr type</param>
+        /// <returns>Returns the Json type.</returns>
         public static string GetJsonTypeFromClrType(Type type)
         {
             if (IsNumeric(type))
@@ -45,6 +50,11 @@ namespace DataSerializr.Json
             return STRING;
         }
 
+        /// <summary>
+        /// Determines the equivalent Clr type from the Json type.
+        /// </summary>
+        /// <param name="jsonType"></param>
+        /// <returns>Returns the Clr type.</returns>
         public static Type GetClrTypeFromJsonType(string jsonType)
         {
             if (jsonType == NUMBER)
@@ -59,10 +69,19 @@ namespace DataSerializr.Json
             return typeof(string);
         }
 
+        /// <summary>
+        /// Determines whether the Clr type is a numeric type.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public static bool IsNumeric(Type type)
         {
-            return type == typeof(int) || type == typeof(long) || type == typeof(double) ||
-                    type == typeof(decimal) || type == typeof(short) || type == typeof(float);
+            return type == typeof(int) 
+                || type == typeof(long) 
+                || type == typeof(double) 
+                || type == typeof(decimal) 
+                || type == typeof(short) 
+                || type == typeof(float);
         }
     }
 }
