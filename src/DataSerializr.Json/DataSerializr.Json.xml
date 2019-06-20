@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataSerializr.Json</name>
+    </assembly>
+    <members>
+        <member name="T:DataSerializr.Json.DataTableJsonConverter">
+            <summary>
+            Converts <see cref="T:System.Data.DataTable"/> to and from JSON.
+            </summary>
+        </member>
+        <member name="M:DataSerializr.Json.DataTableJsonConverter.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Initializes an instance of DataTableJsonConverter.
+            </summary>
+            <param name="timeOffset">The time offset to use to calculate the time.</param>
+            <param name="useClrTypes">A flag to determine whether to use Clr types during serialization/deserialization. The default if false.</param>
+        </member>
+        <member name="M:DataSerializr.Json.DataTableJsonConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether this instance can convert the specified value type.
+            </summary>
+            <param name="objectType">The type of the object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSerializr.Json.DataTableJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns>The object value.</returns>
+        </member>
+        <member name="M:DataSerializr.Json.DataTableJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter"/> to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+        <member name="T:DataSerializr.Json.DataViewJsonConverter">
+            <summary>
+            Converts <see cref="T:System.Data.DataView"/> to and from JSON.
+            </summary>
+        </member>
+        <member name="M:DataSerializr.Json.DataViewJsonConverter.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Initializes an instance of DataViewJsonConverter.
+            </summary>
+            <param name="timeOffset">The time offset to use to calculate the time.</param>
+            <param name="useClrTypes">A flag to determine whether to use Clr types during serialization/deserialization. The default if false.</param>
+        </member>
+        <member name="M:DataSerializr.Json.DataViewJsonConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether this instance can convert the specified value type.
+            </summary>
+            <param name="objectType">The type of the object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSerializr.Json.DataViewJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns>The object value.</returns>
+        </member>
+        <member name="M:DataSerializr.Json.DataViewJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter"/> to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+        <member name="T:DataSerializr.Json.DateTimeUtil">
+            <summary>
+            A utility for converting <see cref="T:System.DateTime"/> to and from a numeric value.
+            </summary>
+        </member>
+        <member name="M:DataSerializr.Json.DateTimeUtil.ToNumericDateTime(System.DateTime,System.Int32)">
+            <summary>
+            Converts a <see cref="T:System.DateTime"/> instance to an equivalent numeric date value.
+            </summary>
+            <param name="date">The <see cref="T:System.DateTime"/> instance.</param>
+            <param name="timeOffset">The time offset</param>
+            <returns>Returns a numeric date value.</returns>
+        </member>
+        <member name="M:DataSerializr.Json.DateTimeUtil.FromNumericDatetime(System.Int64,System.Int32)">
+            <summary>
+            Converts a numeric date value to an equivalent <see cref="T:System.DateTime"/> instance.
+            </summary>
+            <param name="numericDate">The numeric date value</param>
+            <param name="timeOffset">The time offset</param>
+            <returns>Return the <see cref="T:System.DateTime"/> instance.</returns>
+        </member>
+        <member name="T:DataSerializr.Json.JsonTypeConverter">
+            <summary>
+            A utility to derive Clr types from JSON types and vice versa.
+            </summary>
+        </member>
+        <member name="M:DataSerializr.Json.JsonTypeConverter.GetJsonTypeFromClrType(System.Type)">
+            <summary>
+            Determines the equivalent Json type from the Clr type.
+            </summary>
+            <param name="type">The Clr type</param>
+            <returns>Returns the Json type.</returns>
+        </member>
+        <member name="M:DataSerializr.Json.JsonTypeConverter.GetClrTypeFromJsonType(System.String)">
+            <summary>
+            Determines the equivalent Clr type from the Json type.
+            </summary>
+            <param name="jsonType"></param>
+            <returns>Returns the Clr type.</returns>
+        </member>
+        <member name="M:DataSerializr.Json.JsonTypeConverter.IsNumeric(System.Type)">
+            <summary>
+            Determines whether the Clr type is a numeric type.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
