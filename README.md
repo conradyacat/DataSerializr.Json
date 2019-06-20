@@ -20,7 +20,7 @@ DataTable table = JsonConvert.DeserializeObject<DataTable>(json2, settings);
 
 # Motivation
 ## DataTableJsonConverter
-The default Json.Net DataTableConverter produces large JSON string for large DataTables. The trim down the JSON string size, the DataTableJsonConverter has been implemented to avoid repeating the column names for every row.
+The default Json.Net DataTableConverter produces large JSON string for large DataTables. In order to trim down the JSON string size, the DataTableJsonConverter has been implemented to avoid repeating the column names for every row. If the DataTable size is small, the default Json.Net DataTableConverter will still produce a smaller JSON string.
 
 # Example
 ```C#
@@ -34,6 +34,8 @@ table.Rows.Add(1, Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.New
 table.Rows.Add(2, Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
 table.Rows.Add(3, Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
 ```
+The code snippet above will generate the following JSON outputs.
+
 ## Default JSON.Net DataTableConveter Output
 ```JSON
 [
