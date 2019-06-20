@@ -65,7 +65,7 @@ namespace DataSerializr.Json
         /// Determines whether this instance can convert the specified value type.
         /// </summary>
         /// <param name="objectType">The type of the object.</param>
-        /// <returns></returns>
+        /// <returns>Returns a boolean value whether the object instance can be converted.</returns>
         public override bool CanConvert(Type objectType)
         {
             return objectType == typeof(DataView);
@@ -145,7 +145,7 @@ namespace DataSerializr.Json
                             continue;
 
                         if (column.DataType == typeof(DateTime))
-                            newRow[column.ColumnName] = DateTimeUtil.FromNumericDatetime((long)reader.Value, _timeOffset);
+                            newRow[column.ColumnName] = DateTimeUtil.FromNumericDateTime((long)reader.Value, _timeOffset);
                         else
                             newRow[column.ColumnName] = reader.Value;
                     }

@@ -1,28 +1,15 @@
 DataSerializr.Json
 ==================
 
-A JsonConverter for Newtonsoft's Json.Net to serialize and deserialize DataTable and DataView into a smaller Json.
+Custom JsonConverters for Newtonsoft's Json.Net to serialize and deserialize various types.
 
 [![NuGet](https://img.shields.io/nuget/v/DataSerializr.Json.svg)](https://nuget.org/packages/DataSerializr.Json)
-
-# Usage
-```C#
-var settings = new JsonSerializerSettings
-{
-    Converters = new List<JsonConverter> {  new DataTableJsonConverter() }
-};
-// to serialize the DataTable to JSON
-string json = JsonConvert.SerializeObject(datatable, Formatting.None, settings);
-
-// to deserialize the JSON to DataTable
-DataTable table = JsonConvert.DeserializeObject<DataTable>(json2, settings);
-```
 
 # Motivation
 ## DataTableJsonConverter
 The default Json.Net DataTableConverter produces large JSON string for large DataTables. In order to trim down the JSON string size, the DataTableJsonConverter has been implemented to avoid repeating the column names for every row. If the DataTable size is small, the default Json.Net DataTableConverter will still produce a smaller JSON string.
 
-# Example
+### Examples
 ```C#
 var table = new DataTable("Table1");
 table.Columns.Add("id", typeof(int));
@@ -33,10 +20,17 @@ table.Columns.Add("address", typeof(string));
 table.Rows.Add(1, Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
 table.Rows.Add(2, Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
 table.Rows.Add(3, Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
+
+var settings = new JsonSerializerSettings
+{
+    Converters = new List<JsonConverter> { new DataTableJsonConverter() }
+};
+
+string json = JsonConvert.SerializeObject(table, Formatting.Indented, settings);
 ```
 The code snippet above will generate the following JSON outputs.
 
-## Default JSON.Net DataTableConveter Output
+#### Default JSON.Net DataTableConveter Output
 ```JSON
 [
   {
@@ -60,7 +54,7 @@ The code snippet above will generate the following JSON outputs.
 ]
 ```
 
-## DataSerializer.Json Output
+#### DataSerializer.Json Output
 ```JSON
 {
   "name": "Table1",

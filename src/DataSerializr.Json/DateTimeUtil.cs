@@ -46,7 +46,7 @@ namespace DataSerializr.Json
         /// <param name="numericDate">The numeric date value</param>
         /// <param name="timeOffset">The time offset</param>
         /// <returns>Return the <see cref="DateTime"/> instance.</returns>
-        public static DateTime FromNumericDatetime(long numericDate, int timeOffset = 0)
+        public static DateTime FromNumericDateTime(long numericDate, int timeOffset = 0)
         {
             if (numericDate == -1)
                 return DateTime.MinValue;
