@@ -29,7 +29,7 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-    <DocumentationFile>C:\temp\Scratch\Git\DataSerializr.Json\src\DataSerializr.Json\DataSerializr.Json.xml</DocumentationFile>
+    <DocumentationFile>.\src\DataSerializr.Json\DataSerializr.Json.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
